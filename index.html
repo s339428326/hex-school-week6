@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Boostrap Index</title>
+    <title>Coding Home|</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
@@ -25,15 +25,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </head>
 
   <body class="bg-main-bg">
-    <header class="header bg-sec-bg">
-      <nav class="container d-flex justify-content-between py-24">
-        <h1 class="logo fs-3 mb-0">
-          <a href="#"> Coding Home|</a>
-        </h1>
+    <nav class="header bg-sec-bg">
+      <div class="container d-flex justify-content-between py-24">
+        <a class="logo fs-3" href="#"> Coding Home| </a>
         <ul class="d-flex list-unstyled align-items-center mb-0 gap-48">
           <li><a class="text-white" href="#">首頁</a></li>
           <li><a class="text-white" href="#">課程介紹</a></li>
@@ -45,33 +42,29 @@
             >
           </li>
         </ul>
-      </nav>
-    </header>
-    <div class="d-flex">
-      <div class="w-50 border-bottom border-2 border-primary"></div>
-      <div class="w-50 border-bottom border-2 border-blue"></div>
-    </div>
+      </div>
+      <div class="d-flex">
+        <div class="w-50 border-bottom border-2 border-primary"></div>
+        <div class="w-50 border-bottom border-2 border-blue"></div>
+      </div>
+    </nav>
 
     
-<main class="index">
-  <section class="container banner-h position-relative">
-    <div class="row">
-      <img
-        class="mt-80"
-        src="./assets/images/bg_home.jpg"
-        alt=""
-      />
-      <div
-        class="col-6 text-center position-absolute top-50 start-50 translate-middle"
-      >
-        <div class="border border-1 position-relative py-48 bg-main-bg box">
-          <h2 class="gradient mb-0 title">全台最豐富的程式家教</h2>
-          <h2 class="text-white mb-12 title">在實踐中化理想為實現</h2>
-          <p class="text-white fs-5">全台最專業師資｜到府程式家教｜客製化課程</p>
-        </div>
+<header class="container banner-h position-relative">
+  <div class="row">
+  <div
+      class="col-6 text-center position-absolute top-50 start-50 translate-middle"
+    >
+      <div class="border border-1 position-relative py-48 bg-main-bg box">
+        <h2 class="gradient mb-0 title">全台最豐富的程式家教</h2>
+        <h2 class="text-white mb-12 title">在實踐中化理想為實現</h2>
+        <p class="text-white fs-5">全台最專業師資｜到府程式家教｜客製化課程</p>
       </div>
     </div>
-  </section>
+  </div>
+</header>
+
+<main class="index">
   <section class="bg-sec-bg">
     <div class="container py-80">
       <ul class="row list-unstyled mb-0 align-items-center">
@@ -145,8 +138,8 @@
     </div>
   </section>
   <section class="bg-sec-bg">
-    <div class="swiper-container py-80">
-      <p class="text-white fs-2 fw-bold text-center mb-48">熱門<span class="text-btLine">推薦</span>課程 </p>
+    <div class="swiper swiper-container py-80">
+      <p class="text-white fs-2 fw-bold text-center mb-48">你想要學習<span class="text-btLine">的程式</span>，都在這裡 </p>
       <div class="swiper-wrapper text-white">
           <div class="swiper-slide border text-center py-24 rounded-3">JavaScript</div>
           <div class="swiper-slide border text-center py-24 rounded-3">HTML/CSS</div>
@@ -164,24 +157,79 @@
       </div>
       <div class="swiper-pagination"></div>
     </div>
-
+  </section>
+  <section class="course container py-80">
+    <p class="text-white fs-2 fw-bold text-center mb-48">熱門<span class="text-btLine">推薦</span>課程 </p>
+    <div class="row">
+      <div class="col-xl-3 col-md-6 mt-xl-0">
+        <a class="card bg-sec-bg rounded-3" href="">
+            <img class="mt-24 rounded-circle mx-auto mb-8" src="./assets/images/teacher01.jpg" alt="teacher01">
+            <p class="text-center text-white fs-6">Belinda</p>
+            <div class="card-body p-24">
+              <p class="fs-4 fw-bold text-white mb-8">基礎前端 - HTML</p>
+              <p class="fs-6 mt-xl-36 mt-lg-8 mt-md-36 mb-8">前端語言</p>
+              <p class="fs-6 mt-md-6 text-white">帶領無基礎的平民老百姓，從最基礎的 HTML 語法出發，使用最淺顯易懂的語言與生活隨處可見的例子...</p>
+            </div> 
+            <div class="card-footer d-flex align-items-center justify-content-center border-white py-24">
+              <p class="text-white fs-6 me-8">50分鐘</p>
+              <p class="fs-1 text-white">NT$1600</p>
+            </div>
+        </a>
+      </div>
+      <div class="col-xl-3 col-md-6 mt-xl-0">
+        <a class="card bg-sec-bg rounded-3" href="">
+            <img class="mt-24 rounded-circle mx-auto mb-8" src="./assets/images/teacher02.jpg" alt="teacher02">
+            <p class="text-center text-white fs-6">Joe</p>
+            <div class="card-body p-24">
+              <p class="fs-4 fw-bold text-white mb-8">2022 Python 全攻略｜從入門到實務</p>
+              <p class="fs-6 mt-6 mb-8">後端語言</p>
+              <p class="fs-6 text-white">Python支援多種程式設計範式，包括函數式、指令式、反射式、結構化和物件導向程式設計，它擁有動態...</p>
+            </div> 
+            <div class="card-footer d-flex align-items-center justify-content-center border-white py-24">
+              <p class="text-white fs-6 me-8">50分鐘</p>
+              <p class="fs-1 text-white">NT$2200</p>
+            </div>
+        </a>
+      </div>
+      <div class="col-xl-3 col-md-6 mt-xl-0 mt-md-24">
+        <a class="card bg-sec-bg rounded-3 card-fixed" href="">
+            <img class="mt-24 rounded-circle mx-auto mb-8" src="./assets/images/teacher03.jpg" alt="teacher03">
+            <p class="text-center text-white fs-6">Joe</p>
+            <div class="card-body py-24 px-16">
+              <p class="fs-4 fw-bold text-white mb-8">活用 Line Bot ｜APP 開發到上架完整實戰攻略</p>
+              <p class="fs-6 mt-6 mb-8">行動應用開發</p>
+              <p class="fs-6 text-white">Line Bot 可用於實用的目的，如客戶服務或資訊獲取，有些聊天機器人會搭載自然語言處理系統，但大多簡...</p>
+            </div> 
+            <div class="card-footer d-flex align-items-center justify-content-center border-white py-24">
+              <p class="text-white fs-6 me-8">50分鐘</p>
+              <p class="fs-1 text-white">NT$1600</p>
+            </div>
+        </a>
+      </div>
+      <div class="col-xl-3 col-md-6 mt-xl-0 mt-md-24">
+        <a class="card bg-sec-bg rounded-3" href="">
+            <img class="mt-24 rounded-circle mx-auto mb-8" src="./assets/images/teacher04.jpg" alt="teacher03">
+            <p class="text-center text-white fs-6">Lina</p>
+            <div class="card-body p-24">
+              <p class="fs-4 fw-bold text-white mb-8">Linux 零基礎七天入門｜入門到實務</p>
+              <p class="fs-6 mt-6 mb-8">作業系統與伺服器</p>
+              <p class="fs-6 text-white">Linux是一種自由和開放原始碼的類UNIX作業系統，作業系統中包含了許多使用者圖形介面和其他實用...</p>
+            </div> 
+            <div class="card-footer d-flex align-items-center justify-content-center border-white py-24">
+              <p class="text-white fs-6 me-8">50分鐘</p>
+              <p class="fs-1 text-white">NT$1100</p>
+            </div>
+        </a>
+      </div>
+    </div>
   </section>
 </main>
 
-<script>
-  var swiper = new Swiper('.swiper-container', {
-      pagination: '.swiper-pagination',
-      slidesPerView: 10,
-      paginationClickable: true,
-      spaceBetween: 30,
-      freeMode: true
-  });
-</script>
-
-
-
-    <footer class="footer">footer</footer>
+    <footer class="footer text-center text-white py-24">
+      Coding Home © 2022 All Rights Reserved
+    </footer>
     <script src="./assets/js/vendors.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>
 </html>
