@@ -1,0 +1,17 @@
+.index {
+  h2 {
+    font-size: 1.5rem;
+    @include media-breakpoint-up(md) {
+      font-size: 3rem;
+    }
+  }
+  p {
+    font-size: 0.875rem;
+    @include media-breakpoint-up(md) {
+      font-size: 1.125rem;
+    }
+  }
+  .material-icons {
+    font-size: 50px;
+  }
+}
