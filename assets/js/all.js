@@ -2,15 +2,14 @@
 
 var swiper = new Swiper(".swiper-container", {
   pagination: ".swiper-pagination",
-  //   slidesPerView: 10,
   breakpoints: {
     991: {
       slidesPerView: 10,
-      spaceBetween: 40
+      spaceBetween: 16
     },
     768: {
       slidesPerView: 5,
-      spaceBetween: 50
+      spaceBetween: 16
     },
     0: {
       slidesPerView: 3,
@@ -18,7 +17,25 @@ var swiper = new Swiper(".swiper-container", {
     }
   },
   paginationClickable: true,
-  //   spaceBetween: 30,
   freeMode: true
+});
+var swiper_1 = new Swiper(".swiper_slider", {
+  spaceBetween: 30,
+  effect: "fade",
+  // 分頁
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  // 左右箭頭
+  navigation: {
+    nextEl: ".swiper-next",
+    prevEl: ".swiper-prev"
+  },
+  // 滾動條
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true
+  }
 });
 //# sourceMappingURL=all.js.map
