@@ -19,22 +19,29 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/style/all.css" />
     <!-- Swiper -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </head>
 
-  <body class="bg-main-bg">
-    <header class="header bg-sec-bg">
-      <nav class="container d-flex justify-content-between py-24">
-        <h1 class="logo fs-3 mb-0">
-          <a href="#"> Coding Home|</a>
-        </h1>
-        <ul class="d-flex list-unstyled align-items-center mb-0 gap-48">
+  <body>
+    <nav class="header bg-sec-bg">
+      <div
+        class="container d-flex justify-content-between align-items-center py-24"
+      >
+        <a class="logo fs-3" href="#"> Coding Home| </a>
+        <ul
+          class="d-md-flex d-none list-unstyled align-items-center mb-0 gap-48"
+        >
           <li><a class="text-white" href="#">首頁</a></li>
           <li><a class="text-white" href="#">課程介紹</a></li>
           <li>
@@ -45,17 +52,23 @@
             >
           </li>
         </ul>
-      </nav>
-    </header>
-    <div class="d-flex">
-      <div class="w-50 border-bottom border-2 border-primary"></div>
-      <div class="w-50 border-bottom border-2 border-blue"></div>
-    </div>
+        <span class="material-icons text-primary d-md-none handle">
+          drag_handle
+        </span>
+      </div>
+      <div class="d-flex">
+        <div class="w-50 border-bottom border-2 border-primary"></div>
+        <div class="w-50 border-bottom border-2 border-blue"></div>
+      </div>
+    </nav>
 
     <%- contents %>
 
-    <footer class="footer">footer</footer>
+    <footer class="footer text-center py-16 py-xs-24 bg-sec-bg">
+      <p class="text-secondary">Coding Home © 2022 All Rights Reserved</p>
+    </footer>
     <script src="./assets/js/vendors.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>
 </html>

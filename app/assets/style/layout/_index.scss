@@ -1,17 +1,340 @@
-.index {
-  h2 {
+header {
+  h1 {
     font-size: 1.5rem;
-    @include media-breakpoint-up(md) {
-      font-size: 3rem;
-    }
   }
   p {
-    font-size: 0.875rem;
-    @include media-breakpoint-up(md) {
-      font-size: 1.125rem;
+    font-size: 0.875rem !important;
+  }
+  @include media-breakpoint-up(md) {
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.125rem !important;
     }
   }
+}
+
+.banner-h {
+  min-height: 336px;
+  background: url(../images/bg_home_mobile.jpg) no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  @include media-breakpoint-up(md) {
+    min-height: 680px;
+  }
+  @include media-breakpoint-up(lg) {
+    background: url(../images/bg_home.jpg) no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.teaching {
   .material-icons {
     font-size: 50px;
   }
+}
+
+.card--active {
+  opacity: 0.5;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  transition: all 0.25s ease-in;
+  background: $black-2 !important;
+  &:hover {
+    opacity: 1;
+    background: $black-2 !important;
+    border: 1px solid $green;
+    .material-icons {
+      @include gradient-text();
+    }
+  }
+  @include media-breakpoint-up(md) {
+    background: $black-1 !important;
+  }
+}
+
+.teaching {
+  li:first-child {
+    h3::after {
+      content: " ";
+      display: block;
+      background-color: $primary;
+      margin-top: 16px;
+      margin-right: auto;
+      margin-left: auto;
+      width: 48px;
+      height: 3px;
+      @include media-breakpoint-up(xl) {
+        margin-right: 0;
+        margin-left: 0;
+        width: 54px;
+        height: 3px;
+      }
+    }
+  }
+}
+
+.course {
+  img {
+    width: 100px;
+    height: 100px;
+  }
+  .btn {
+    color: white;
+    background: linear-gradient(to right, $green, $blue);
+  }
+}
+
+.box {
+  &::before,
+  &::after {
+    content: " ";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: $white;
+  }
+  &::before {
+    top: -5px;
+    left: -5px;
+  }
+  &::after {
+    top: -5px;
+    right: -5px;
+  }
+  > :first-child {
+    &::before,
+    &::after {
+      content: " ";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: $white;
+    }
+    &::before {
+      bottom: -5px;
+      left: -5px;
+    }
+    &::after {
+      bottom: -5px;
+      right: -5px;
+    }
+  }
+}
+
+.card-img {
+  object-fit: cover;
+  width: 100%;
+  height: 263px;
+  @include media-breakpoint-up(md) {
+    height: 350px;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 615px;
+  }
+}
+
+.card-style {
+  .material-icons,
+  .card-text {
+    opacity: 0.5;
+    z-index: 1;
+  }
+  .card-title {
+    z-index: 1;
+  }
+  &::after {
+    content: " ";
+    background-color: #1c1c1c;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    z-index: 0;
+  }
+  .material-icons {
+    font-size: 28px !important;
+    @include media-breakpoint-up(md) {
+      font-size: 32px !important;
+    }
+  }
+}
+
+.card-style:hover {
+  .material-icons,
+  .card-text {
+    opacity: 1;
+  }
+  .material-icons {
+    color: $primary;
+  }
+  span.text-btLine {
+    border-color: $primary !important;
+  }
+  &::after {
+    opacity: 0.12;
+  }
+}
+
+.text-line::after {
+  content: " ";
+  display: block;
+  background-color: $primary;
+  width: 54px;
+  height: 3px;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  margin-right: auto;
+  margin-left: auto;
+  @include media-breakpoint-up(md) {
+    content: " ";
+    display: block;
+    background-color: $primary;
+    width: 54px;
+    height: 3px;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .card--hover:hover {
+    &::after,
+    &::before {
+      content: " ";
+      display: block;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      border-top: 1px solid $primary;
+    }
+    &::after {
+      top: 0;
+      left: 0;
+      border-top-left-radius: 10px;
+      border-left: 1px solid $primary;
+    }
+    &::before {
+      top: 0;
+      right: 0;
+      border-top-right-radius: 10px;
+      border-right: 1px solid $primary;
+    }
+    .card-body {
+      &::after,
+      &::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        border-bottom: 1px solid $primary;
+      }
+      &::after {
+        bottom: 0;
+        left: 0;
+        border-bottom-left-radius: 10px;
+        border-left: 1px solid $primary;
+      }
+      &::before {
+        bottom: 0;
+        right: 0;
+        border-bottom-right-radius: 10px;
+        border-right: 1px solid $primary;
+      }
+    }
+  }
+}
+
+// 不知道哪裡來的
+:root {
+  --swiper-pagination-bullet-horizontal-gap: 0;
+  --swiper-pagination-bullet-width: 1rem;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-color: #{$primary};
+  --swiper-pagination-bullet-inactive-color: #{$primary};
+}
+
+.swiper-pagination-bullet {
+  border-radius: 1em;
+  --swiper-pagination-bullet-width: 0.5rem;
+  transition: width 0.3s;
+  &.swiper-pagination-bullet-active {
+    --swiper-pagination-bullet-width: 1rem;
+  }
+}
+
+.commend {
+  background: url(../images/bg_share.jpg) no-repeat !important;
+  background-size: cover !important;
+  min-height: 733px;
+}
+
+.bt-slide {
+  min-height: 429px;
+  article {
+    position: relative;
+    border-radius: 24px;
+    border-bottom-left-radius: 0;
+    left: 0;
+    top: 0;
+    @include media-breakpoint-up(xl) {
+      top: auto;
+      left: -50px;
+      bottom: -258px;
+    }
+    @include media-breakpoint-up(lg) {
+      bottom: -235px;
+    }
+  }
+  .slider-img {
+    object-fit: cover;
+    height: 213px;
+    border-radius: 24px !important;
+    @include media-breakpoint-up(md) {
+      height: 381px;
+    }
+  }
+}
+
+.img-border {
+  position: relative;
+  top: 10px;
+  border: 1px solid #7c7e77;
+  border-radius: 24px;
+  img {
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+  }
+}
+
+.student-img {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  right: 32px;
+}
+
+.navigation-buttons {
+  @include media-breakpoint-up(xl) {
+    position: relative;
+    bottom: 30px;
+    right: 208px;
+  }
+}
+
+.menu_book {
+  font-size: 80px;
+}
+
+.r-24 {
+  border-radius: 24px !important;
 }

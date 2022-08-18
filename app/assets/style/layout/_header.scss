@@ -1,0 +1,13 @@
+//logo
+.logo {
+  background: url(../images/logo2.svg) no-repeat;
+  background-size: contain;
+  height: 24px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  @include media-breakpoint-up(md) {
+    background: url(../images/logo.svg) no-repeat;
+    height: 42px;
+  }
+}
