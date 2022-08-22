@@ -1,0 +1,13 @@
+.course-swiper {
+  .swiper-slide {
+    width: auto;
+  }
+
+  .btn:hover {
+    border-color: $primary !important;
+    background-color: transparent !important;
+    a {
+      color: $primary !important;
+    }
+  }
+}

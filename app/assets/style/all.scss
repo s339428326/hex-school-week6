@@ -5,7 +5,8 @@
 @import "./base/mixin";
 
 @import "./layout/header";
-@import "./layout/index.scss";
+@import "./page/index.scss";
+@import "./page/course";
 
 //gradient
 .gradient {
@@ -25,4 +26,149 @@
 .text-btLine {
   border-bottom: 3px solid $green;
   padding-bottom: 16px;
+}
+
+.circle-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.btn-gradient {
+  color: white;
+  background: linear-gradient(to right, $green, $blue);
+}
+
+.btn-activce {
+  border-color: $primary !important;
+  background-color: transparent !important;
+  a {
+    color: $primary !important;
+  }
+}
+
+.list-square {
+  list-style-type: square;
+  &::marker {
+    color: $primary;
+  }
+}
+
+.float-block {
+  position: relative;
+  @include media-breakpoint-up(md) {
+    position: sticky;
+    top: 92px;
+    z-index: 0;
+  }
+}
+
+.timeline {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: " ";
+    left: 0;
+    right: 50%;
+    background-color: $gray-400;
+    height: 2px;
+  }
+  &::before {
+    position: absolute;
+    content: " ";
+    left: 50%;
+    right: 0;
+    background-color: $gray-400;
+    height: 2px;
+  }
+  &-pointer {
+    position: relative;
+    p {
+      padding-top: 24px;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: -9px;
+      border: 1px solid $gray-400;
+      background-color: $black-1;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+    }
+    &.step-1::before {
+      content: "1";
+    }
+    &.step-2::before {
+      content: "2";
+    }
+    &.step-3::before {
+      content: "3";
+    }
+    &.active {
+      &::before {
+        color: white;
+        background-color: $primary;
+        border: $primary;
+      }
+    }
+  }
+}
+
+.cards-zindex {
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    top: 15%;
+    left: 0;
+  }
+}
+
+.datepicker {
+  color: $black;
+}
+
+.datepicker-cell {
+  &:not(.disabled) {
+    &:hover {
+      background-color: $gray-100;
+    }
+    &.next,
+    &.prev {
+      color: $secondary;
+    }
+  }
+  &.selected {
+    background-color: $primary;
+    &:hover {
+      background-color: $primary;
+    }
+  }
+}
+
+//datepicker
+.datepicker-controls {
+  .button {
+    justify-content: center;
+    padding-bottom: calc(0.5em - 1px);
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: calc(0.5em - 1px);
+    text-align: center;
+    white-space: nowrap;
+    color: $dark;
+    background-color: $white;
+    border: 1px solid transparent;
+    cursor: pointer;
+    &:hover {
+      background-color: $gray-100;
+    }
+  }
+  .view-switch {
+    flex: auto;
+  }
 }

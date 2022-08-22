@@ -1,20 +1,8 @@
 var swiper = new Swiper(".swiper-container", {
   pagination: ".swiper-pagination",
-  breakpoints: {
-    991: {
-      slidesPerView: 10,
-      spaceBetween: 16,
-    },
-    768: {
-      slidesPerView: 5,
-      spaceBetween: 16,
-    },
-    0: {
-      slidesPerView: 3,
-      spaceBetween: 10,
-    },
-  },
-  paginationClickable: true,
+  slidesPerView: "auto",
+  spaceBetween: 16,
+  paginationClickable: false,
   freeMode: true,
 });
 
@@ -36,4 +24,28 @@ const swiper_1 = new Swiper(".swiper_slider", {
     el: ".swiper-scrollbar",
     draggable: true,
   },
+});
+
+var courseSwiper = new Swiper(".course-swiper", {
+  pagination: ".swiper-pagination",
+  slidesPerView: "auto",
+  spaceBetween: 16,
+  paginationClickable: false,
+  freeMode: true,
+});
+
+const list = document.querySelector(".list");
+const handle = document.querySelector(".handle");
+
+handle.addEventListener("click", (e) => {
+  list.classList.toggle("list--active");
+});
+
+import Datepicker from "../../../node_modules/vanillajs-datepicker/js/Datepicker.js";
+const elem = document.querySelector(".date");
+// const datepicker = new Datepicker(elem, {
+//   language: "zh-TW",
+// });
+const datepicker = new Datepicker(elem, {
+  buttonClass: "btn",
 });

@@ -11,3 +11,32 @@
     height: 42px;
   }
 }
+
+.list {
+  display: flex;
+  background-color: $black-1 !important;
+  position: absolute;
+  flex-direction: column;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  text-align: center;
+  z-index: 99;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  @include media-breakpoint-up(md) {
+    display: flex;
+    padding: 0;
+    position: static;
+    background-color: transparent !important;
+    width: auto;
+    flex-direction: row;
+    max-height: 500px;
+  }
+}
+
+.list--active {
+  padding: 24px;
+  max-height: 500px;
+}

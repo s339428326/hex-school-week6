@@ -1,0 +1,144 @@
+---
+title: Coding Home|
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<main class="bg-dark">
+  <section class="pt-32 pb-16 bg-sec-bg">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="timeline col-9 col-md-7"></div>
+      </div>
+      <div class="row text-info">
+        <div class="col-3 col-md-5">
+          <div class="timeline-pointer text-center text-info step-1 active">
+            <p>課程報名</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="timeline-pointer text-center text-info step-2">
+            <p>信用卡付款</p>
+          </div>
+        </div>
+        <div class="col-3 col-md-5">
+          <div class="timeline-pointer text-center text-info step-3">
+            <p>付款功能</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mt-48">
+    <div
+      class="row d-flex justify-content-center align-items-center position-relative"
+    >
+      <div
+        class="col-md-4 text-white bg-sec-bg text-center py-48 px-32 cards-zindex"
+      >
+        <img
+          class="circle-img mb-24 border border-2 border-primary"
+          src="./assets/images/teacher01.jpg"
+          alt="t1"
+        />
+        <h2 class="fs-5 mb-4">2022 Python 全攻略｜從入門到實務</h2>
+        <p class="text-primary mb-8">前端語言</p>
+        <p class="text-start">
+          帶領無基礎、文組生、對網頁設計有興趣的人，進入網站工程領域的基礎課，將從最基礎的
+          HTML 語法出發。
+        </p>
+      </div>
+      <div
+        class="col-md-8 offset-md-3 text-white bg-main-bg py-48 ps-md-80 ps-lg-114 px-32"
+      >
+        <form class="" action="">
+          <h1 class="fs-3 text-center">課程報名</h1>
+          <h2 class="fs-4 mb-6">選擇付款方式</h2>
+          <ul
+            class="d-flex flex-wrap me-0 ms-0 mb-32 list-unstyled align-items-center justify-content-center justify-content-md-start gap-16 text-nowrap"
+          >
+            <li
+              class="col-5 col-lg-auto btn btn-outline-light border-primary py-16"
+            >
+              <a href="#">信用卡付款</a>
+            </li>
+            <li class="col-5 col-lg-auto btn btn-outline-light py-16">
+              <a class="text-white" href="#">超商繳款</a>
+            </li>
+            <li class="col-5 col-lg-auto btn btn-outline-light py-16">
+              <a class="text-white" href="#">ATM轉帳</a>
+            </li>
+            <li class="col-5 col-lg-auto btn btn-outline-light py-16">
+              <a class="text-white" href="#">12期分期付款</a>
+            </li>
+          </ul>
+          <h2 class="fs-4 mb-24">訂單資訊</h2>
+          <div class="row flex-wrap mb-24">
+            <div class="col-md-6">
+              <div class="d-flex flex-column">
+                <label class="text-info mb-6" for="name">姓名</label>
+                <input
+                  class="py-8 px-16 bg-main-bg border border rounded-2 text-white"
+                  id="name"
+                  type="text"
+                  placeholder="請輸入姓名"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex flex-column">
+                <label class="text-info mb-6" for="tel">電話</label>
+                <input
+                  class="py-8 px-16 bg-main-bg border border rounded-2 text-white"
+                  id="tel"
+                  type="tel"
+                  placeholder="請輸入電話號碼"
+                />
+              </div>
+            </div>
+            <div></div>
+          </div>
+          <div class="row mb-24">
+            <div class="col d-flex flex-column">
+              <label class="text-info" for="Email">Email</label>
+              <input
+                class="py-8 px-16 bg-main-bg border border rounded-2 text-white"
+                id="Email"
+                type="text"
+                placeholder="請輸入Email"
+              />
+            </div>
+          </div>
+          <div class="row mb-24">
+            <div class="col-md-6">
+                <div class="d-flex flex-column">
+                  <label class="text-info" for="course">課程</label>
+                  <select
+                    id="course"
+                    class="form-select py-8 px-16 rounded-1"
+                    aria-label="Default select example"
+                  >
+                    <option selected>10堂50分鐘</option>
+                    <option value="1">10堂50分鐘</option>
+                    <option value="2">10堂50分鐘</option>
+                    <option value="3">10堂50分鐘</option>
+                  </select>
+                </div>
+  
+              </div>
+              <div class="col-md-6">
+                    <div class="d-flex flex-column">
+                        <label for="date">想預約的日期</label>
+                        <input type="btn date text" name="foo">
+                    </div>
+              </div>
+          </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>

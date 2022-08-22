@@ -31,6 +31,12 @@ header {
   }
 }
 
+.swiper-container {
+  .swiper-slide {
+    width: auto;
+  }
+}
+
 .teaching {
   .material-icons {
     font-size: 50px;
@@ -81,10 +87,6 @@ header {
   img {
     width: 100px;
     height: 100px;
-  }
-  .btn {
-    color: white;
-    background: linear-gradient(to right, $green, $blue);
   }
 }
 
@@ -143,6 +145,10 @@ header {
     opacity: 0.5;
     z-index: 1;
   }
+  .material-icons {
+    opacity: 1;
+    color: $primary;
+  }
   .card-title {
     z-index: 1;
   }
@@ -159,6 +165,8 @@ header {
   .material-icons {
     font-size: 28px !important;
     @include media-breakpoint-up(md) {
+      opacity: 0.5;
+      color: white;
       font-size: 32px !important;
     }
   }
@@ -178,6 +186,9 @@ header {
   &::after {
     opacity: 0.12;
   }
+  .text-line::after {
+    background-color: $primary;
+  }
 }
 
 .text-line::after {
@@ -193,7 +204,7 @@ header {
   @include media-breakpoint-up(md) {
     content: " ";
     display: block;
-    background-color: $primary;
+    background-color: white;
     width: 54px;
     height: 3px;
     margin-top: 16px;
@@ -252,7 +263,7 @@ header {
   }
 }
 
-// 不知道哪裡來的
+// 不知道哪裡來的1
 :root {
   --swiper-pagination-bullet-horizontal-gap: 0;
   --swiper-pagination-bullet-width: 1rem;
