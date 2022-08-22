@@ -31,25 +31,21 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css"
-    />
   </head>
 
   <body>
-    <nav class="header bg-sec-bg sticky-top top-0">
+    <nav class="header bg-sec-bg">
       <div
         class="container d-flex justify-content-between align-items-center py-24"
       >
-        <a class="logo fs-3" href="./index.html"> Coding Home| </a>
+        <a class="logo fs-3" href="#"> Coding Home| </a>
         <ul
-          class="d-md-flex list-unstyled align-items-center mb-0 gap-24 gap-md-48 list"
+          class="d-md-flex d-none list-unstyled align-items-center mb-0 gap-48"
         >
-          <li><a class="text-white" href="./index.html">首頁</a></li>
-          <li><a class="text-white" href="./course.html">課程介紹</a></li>
+          <li><a class="text-white" href="#">首頁</a></li>
+          <li><a class="text-white" href="#">課程介紹</a></li>
           <li>
-            <a class="text-white d-flex justify-content-center" href="#"
+            <a class="text-white d-flex" href="#"
               ><span class="material-icons text-white pe-4">
                 account_circle </span
               >登入</a
@@ -160,19 +156,19 @@
     <div class="swiper swiper-container py-40 py-md-80">
       <p class="text-white fs-2 fw-bold text-center mb-48">你想要學習<span class="text-btLine">的程式</span>，都在這裡 </p>
       <div class="swiper-wrapper text-white">
-          <div class="swiper-slide border text-center py-24 rounded-3 btn btn-outline-light">JavaScript</div>
-          <div class="swiper-slide border text-center py-24 rounded-3 btn btn-outline-light">HTML/CSS</div>
-          <div class="swiper-slide border text-center py-24 rounded-3 btn btn-outline-light">SQL</div>
-          <div class="swiper-slide border text-center py-24 rounded-3 btn btn-outline-light">Java</div>
-          <div class="swiper-slide border text-center py-24 rounded-3 btn btn-outline-light">SQL</div>
-          <div class="swiper-slide border text-center py-24 rounded-3 btn btn-outline-light">Bash/Shell</div>
-          <div class="swiper-slide border text-center py-24 rounded-3 btn btn-outline-light">Python</div>
-          <div class="swiper-slide border text-center py-24 rounded-3 btn btn-outline-light">Python</div>
-          <div class="swiper-slide border text-center py-24 rounded-3 btn btn-outline-light">PHP</div>
-          <div class="swiper-slide border text-center py-24 rounded-3 btn btn-outline-light">C++</div>
-          <div class="swiper-slide border text-center py-24 rounded-3 btn btn-outline-light">Slide 11</div>
-          <div class="swiper-slide border text-center py-24 rounded-3 btn btn-outline-light">Slide 11</div>
-          <div class="swiper-slide border text-center py-24 rounded-3 btn btn-outline-light">Slide 1</div>
+          <div class="swiper-slide border text-center py-24 rounded-3">JavaScript</div>
+          <div class="swiper-slide border text-center py-24 rounded-3">HTML/CSS</div>
+          <div class="swiper-slide border text-center py-24 rounded-3">SQL</div>
+          <div class="swiper-slide border text-center py-24 rounded-3">Java</div>
+          <div class="swiper-slide border text-center py-24 rounded-3">SQL</div>
+          <div class="swiper-slide border text-center py-24 rounded-3">Bash/Shell</div>
+          <div class="swiper-slide border text-center py-24 rounded-3">Python</div>
+          <div class="swiper-slide border text-center py-24 rounded-3">Python</div>
+          <div class="swiper-slide border text-center py-24 rounded-3">PHP</div>
+          <div class="swiper-slide border text-center py-24 rounded-3">C++</div>
+          <div class="swiper-slide border text-center py-24 rounded-3">Slide 11</div>
+          <div class="swiper-slide border text-center py-24 rounded-3">Slide 11</div>
+          <div class="swiper-slide border text-center py-24 rounded-3">Slide 1</div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -198,7 +194,7 @@
       <div class="col-xl-3 col-md-6 mt-24 mt-md-0">
         <a class="card bg-sec-bg rounded-3" href="">
             <img class="mt-24 rounded-circle mx-auto mb-8" src="./assets/images/teacher02.jpg" alt="teacher02">
-            <p class="text-center text-white fs-6">Guava</p>
+            <p class="text-center text-white fs-6">Joe</p>
             <div class="card-body p-24">
               <p class="fs-4 fw-bold text-white mb-8">2022 Python 全攻略｜從入門到實務</p>
               <p class="fs-6 mt-6 mb-8">後端語言</p>
@@ -242,7 +238,7 @@
       </div>
     </div>
     <div class="row justify-content-center mt-24 mt-md-48">
-      <a class="col-auto btn btn-gradient border-0" href="./course.html">所有課程列表</a>
+      <a class="col-auto btn border-0" href="">所有課程列表</a>
     </div>
   </section>
   <section>
@@ -418,7 +414,7 @@
   <section class="bg-dark py-40 py-md-80">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-9 ">
+        <div class="col-md-8">
           <div class="d-flex justify-content-center align-items-center text-center text-lg-start bg-gray-dark r-24 px-lg-48 py-lg-48 py-40 px-24 flex-wrap flex-lg-nowarp">
             <span class="material-icons menu_book text-white me-lg-48 mb-24 mb-xs-0">
               menu_book
@@ -427,7 +423,7 @@
               <h4 class="mb-24 mb-xs-0">加入我們成為導師</h4>
               <p>歡迎各大程式大神加入我們，用知識在世界留下一點影響力。</p>
             </article>
-            <div class="ms-xl-auto">
+            <div class="ms-lg-auto">
               <a class="btn btn-outline-light" href="#">立即預約</a>
             </div>
           </div>
@@ -442,8 +438,6 @@
     </footer>
     <script src="./assets/js/vendors.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>
 </html>
