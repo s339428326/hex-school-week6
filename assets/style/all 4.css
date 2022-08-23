@@ -14378,6 +14378,11 @@ header p {
   z-index: 1;
 }
 
+.card-style .material-icons {
+  opacity: 1;
+  color: #62db54;
+}
+
 .card-style .card-title {
   z-index: 1;
 }
@@ -14399,6 +14404,8 @@ header p {
 
 @media (min-width: 768px) {
   .card-style .material-icons {
+    opacity: 0.5;
+    color: white;
     font-size: 32px !important;
   }
 }
@@ -14420,6 +14427,10 @@ header p {
   opacity: 0.12;
 }
 
+.card-style:hover .text-line::after {
+  background-color: #62db54;
+}
+
 .text-line::after {
   content: " ";
   display: block;
@@ -14436,7 +14447,7 @@ header p {
   .text-line::after {
     content: " ";
     display: block;
-    background-color: #62db54;
+    background-color: white;
     width: 54px;
     height: 3px;
     margin-top: 16px;

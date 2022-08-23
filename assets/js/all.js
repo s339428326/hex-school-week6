@@ -1,9 +1,5 @@
 "use strict";
 
-var _Datepicker = _interopRequireDefault(require("../../../node_modules/vanillajs-datepicker/js/Datepicker.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 var swiper = new Swiper(".swiper-container", {
   pagination: ".swiper-pagination",
   slidesPerView: "auto",
@@ -37,16 +33,18 @@ var courseSwiper = new Swiper(".course-swiper", {
   paginationClickable: false,
   freeMode: true
 });
-var list = document.querySelector(".list");
 var handle = document.querySelector(".handle");
 handle.addEventListener("click", function (e) {
+  var list = document.querySelector(".list");
   list.classList.toggle("list--active");
 });
-var elem = document.querySelector(".date"); // const datepicker = new Datepicker(elem, {
-//   language: "zh-TW",
-// });
-
-var datepicker = new _Datepicker["default"](elem, {
-  buttonClass: "btn"
+var elem = document.querySelector('input[name="datepicker"]');
+var datepicker = new Datepicker(elem, {
+  language: "zh-TW"
+});
+var myModal = document.getElementById("myModal");
+var myInput = document.getElementById("myInput");
+myModal.addEventListener("shown.bs.modal", function () {
+  myInput.focus();
 });
 //# sourceMappingURL=all.js.map

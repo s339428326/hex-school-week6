@@ -57,7 +57,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #202020;
-  background-color: #1c1c1c;
+  background-color: #000;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -589,7 +589,7 @@ progress {
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #1c1c1c;
+  background-color: #000;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   max-width: 100%;
@@ -3036,12 +3036,12 @@ textarea.form-control-lg {
 }
 
 .form-range:focus::-webkit-slider-thumb {
-  -webkit-box-shadow: 0 0 0 1px #1c1c1c, 0 0 0 0.25rem rgba(98, 219, 84, 0.25);
-          box-shadow: 0 0 0 1px #1c1c1c, 0 0 0 0.25rem rgba(98, 219, 84, 0.25);
+  -webkit-box-shadow: 0 0 0 1px #000, 0 0 0 0.25rem rgba(98, 219, 84, 0.25);
+          box-shadow: 0 0 0 1px #000, 0 0 0 0.25rem rgba(98, 219, 84, 0.25);
 }
 
 .form-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #1c1c1c, 0 0 0 0.25rem rgba(98, 219, 84, 0.25);
+  box-shadow: 0 0 0 1px #000, 0 0 0 0.25rem rgba(98, 219, 84, 0.25);
 }
 
 .form-range::-moz-focus-outer {
@@ -5066,8 +5066,8 @@ fieldset:disabled .btn {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #494755;
-  background-color: #1c1c1c;
-  border-color: #dee2e6 #dee2e6 #1c1c1c;
+  background-color: #000;
+  border-color: #dee2e6 #dee2e6 #000;
 }
 
 .nav-tabs .dropdown-menu {
@@ -5754,7 +5754,7 @@ fieldset:disabled .btn {
   font-size: 1rem;
   color: #202020;
   text-align: left;
-  background-color: #1c1c1c;
+  background-color: #000;
   border: 0;
   border-radius: 0;
   overflow-anchor: none;
@@ -5829,7 +5829,7 @@ fieldset:disabled .btn {
 }
 
 .accordion-item {
-  background-color: #1c1c1c;
+  background-color: #000;
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
@@ -6724,15 +6724,15 @@ fieldset:disabled .btn {
   width: 1em;
   height: 1em;
   padding: 0.25em 0.25em;
-  color: #000;
-  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+  color: #fff;
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
   border: 0;
   border-radius: 0.25rem;
   opacity: 0.5;
 }
 
 .btn-close:hover {
-  color: #000;
+  color: #fff;
   text-decoration: none;
   opacity: 0.75;
 }
@@ -9827,7 +9827,7 @@ fieldset:disabled .btn {
 }
 
 .bg-body {
-  background-color: #1c1c1c !important;
+  background-color: #000 !important;
 }
 
 .bg-white {
@@ -14556,6 +14556,21 @@ fieldset:disabled .btn {
   }
 }
 
+.gradient {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#09acf5), to(#62db54));
+  background-image: -o-linear-gradient(#09acf5, #62db54);
+  background-image: linear-gradient(#09acf5, #62db54);
+}
+
+.btn-gradient {
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#62db54), to(#09acf5));
+  background: -o-linear-gradient(left, #62db54, #09acf5);
+  background: linear-gradient(to right, #62db54, #09acf5);
+}
+
 .logo {
   background: url(../images/logo2.svg) no-repeat;
   background-size: contain;
@@ -14616,6 +14631,55 @@ fieldset:disabled .btn {
   max-height: 500px;
 }
 
+.modal-dialog {
+  max-width: 636px;
+}
+
+.login-line {
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-line::after {
+  content: " ";
+  height: 1px;
+  width: 30%;
+  background-color: #c1c1c1;
+}
+
+.login-line::before {
+  content: " ";
+  height: 1px;
+  width: 30%;
+  background-color: #c1c1c1;
+}
+
+.icon-img {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.btn-close {
+  position: absolute;
+  top: 32px;
+  right: 24px;
+}
+
+@media (min-width: 768px) {
+  .spical-footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+}
+
 header h1, header .h1 {
   font-size: 1.5rem;
 }
@@ -14631,6 +14695,22 @@ header p {
   header p {
     font-size: 1.125rem !important;
   }
+}
+
+.list-square {
+  list-style-type: square;
+}
+
+.list-square::marker {
+  color: #62db54;
+}
+
+.number {
+  position: absolute;
+  font-size: 3rem !important;
+  top: -2.5rem;
+  padding: 0 8px;
+  background-color: #1c1c1c;
 }
 
 .banner-h {
@@ -15016,20 +15096,56 @@ header p {
   color: #62db54 !important;
 }
 
-.gradient {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#09acf5), to(#62db54));
-  background-image: -o-linear-gradient(#09acf5, #62db54);
-  background-image: linear-gradient(#09acf5, #62db54);
+.triangle {
+  position: relative;
 }
 
-.number {
+.triangle::before {
   position: absolute;
-  font-size: 3rem !important;
-  top: -2.5rem;
-  padding: 0 8px;
-  background-color: #1c1c1c;
+  content: " ";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 12px 0 12px;
+  border-color: #2d2d2d transparent transparent transparent;
+  bottom: -12px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+  .triangle::before {
+    display: none;
+  }
+  .triangle::after {
+    position: absolute;
+    content: " ";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 0 12px 12px;
+    border-color: transparent transparent transparent #2d2d2d;
+    right: -12px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+
+.float-block {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .float-block {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 92px;
+    z-index: 0;
+  }
 }
 
 .text-btLine {
@@ -15045,13 +15161,6 @@ header p {
      object-fit: cover;
 }
 
-.btn-gradient {
-  color: white;
-  background: -webkit-gradient(linear, left top, right top, from(#62db54), to(#09acf5));
-  background: -o-linear-gradient(left, #62db54, #09acf5);
-  background: linear-gradient(to right, #62db54, #09acf5);
-}
-
 .btn-activce {
   border-color: #62db54 !important;
   background-color: transparent !important;
@@ -15059,27 +15168,6 @@ header p {
 
 .btn-activce a {
   color: #62db54 !important;
-}
-
-.list-square {
-  list-style-type: square;
-}
-
-.list-square::marker {
-  color: #62db54;
-}
-
-.float-block {
-  position: relative;
-}
-
-@media (min-width: 768px) {
-  .float-block {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 92px;
-    z-index: 0;
-  }
 }
 
 .timeline {
@@ -15147,6 +15235,145 @@ header p {
   border: #62db54;
 }
 
+.timeline-2 {
+  position: relative;
+}
+
+.timeline-2::after {
+  position: absolute;
+  content: " ";
+  left: 0;
+  right: 50%;
+  background-color: #62db54;
+  height: 2px;
+}
+
+.timeline-2::before {
+  position: absolute;
+  content: " ";
+  left: 50%;
+  right: 0;
+  background-color: #c1c1c1;
+  height: 2px;
+}
+
+.timeline-2-pointer {
+  position: relative;
+}
+
+.timeline-2-pointer p {
+  padding-top: 24px;
+}
+
+.timeline-2-pointer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -9px;
+  border: 1px solid #c1c1c1;
+  background-color: #2d2d2d;
+  border-radius: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+}
+
+.timeline-2-pointer.step-1::before {
+  content: "\2713";
+}
+
+.timeline-2-pointer.step-2::before {
+  content: "2";
+  background-color: #62db54;
+  border: #62db54;
+  color: white;
+}
+
+.timeline-2-pointer.step-3::before {
+  content: "3";
+}
+
+.timeline-2-pointer.active::before {
+  color: white;
+  background-color: #62db54;
+  border: #62db54;
+}
+
+.timeline-3 {
+  position: relative;
+}
+
+.timeline-3::after {
+  position: absolute;
+  content: " ";
+  left: 0;
+  right: 50%;
+  background-color: #62db54;
+  height: 2px;
+}
+
+.timeline-3::before {
+  position: absolute;
+  content: " ";
+  left: 50%;
+  right: 0;
+  background-color: #62db54;
+  height: 2px;
+}
+
+.timeline-3-pointer {
+  position: relative;
+}
+
+.timeline-3-pointer p {
+  padding-top: 24px;
+}
+
+.timeline-3-pointer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -9px;
+  border: 1px solid #c1c1c1;
+  background-color: #2d2d2d;
+  border-radius: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+}
+
+.timeline-3-pointer.step-1::before {
+  content: "\2713";
+}
+
+.timeline-3-pointer.step-2::before {
+  content: "\2713";
+  background-color: #62db54;
+  border: #62db54;
+  color: white;
+}
+
+.timeline-3-pointer.step-3::before {
+  content: "\2713";
+  background-color: #62db54;
+  border: #62db54;
+  color: white;
+}
+
+.timeline-3-pointer.active::before {
+  color: white;
+  background-color: #62db54;
+  border: #62db54;
+}
+
 @media (min-width: 768px) {
   .cards-zindex {
     position: absolute;
@@ -15175,30 +15402,8 @@ header p {
   background-color: #62db54;
 }
 
-.datepicker-controls .button {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-bottom: calc(0.5em - 1px);
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: calc(0.5em - 1px);
-  text-align: center;
-  white-space: nowrap;
-  color: #000;
-  background-color: #fff;
-  border: 1px solid transparent;
-  cursor: pointer;
-}
-
-.datepicker-controls .button:hover {
-  background-color: #f8f9fa;
-}
-
-.datepicker-controls .view-switch {
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
+.fs-43 {
+  font-size: 43px;
 }
 
 /*# sourceMappingURL=all.css.map */
