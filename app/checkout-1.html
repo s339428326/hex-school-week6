@@ -5,7 +5,7 @@ engine: ejs
 current: index
 ---
 
-<main class="bg-dark">
+<main class="bg-dark mb-40">
   <section class="pt-32 pb-16 bg-sec-bg">
     <div class="container">
       <div class="row justify-content-center">
@@ -31,12 +31,12 @@ current: index
     </div>
   </section>
 
-  <section class="container mt-48">
+  <section class="container mt-48 px-32 px-md-0">
     <div
       class="row d-flex justify-content-center align-items-center position-relative"
     >
       <div
-        class="col-md-4 text-white bg-sec-bg text-center py-48 px-32 cards-zindex"
+        class="col-md-4 text-white bg-sec-bg text-center py-48 px-32 cards-zindex triangle mb-40"
       >
         <img
           class="circle-img mb-24 border border-2 border-primary"
@@ -51,27 +51,27 @@ current: index
         </p>
       </div>
       <div
-        class="col-md-8 offset-md-3 text-white bg-main-bg py-48 ps-md-80 ps-lg-114 px-32"
+        class="col-md-8 offset-md-3 text-white bg-main-bg py-48 ps-md-80 ps-lg-114 px-24 px-md-32"
       >
-        <form class="" action="">
+        <form class="mb" action="">
           <h1 class="fs-3 text-center">課程報名</h1>
           <h2 class="fs-4 mb-6">選擇付款方式</h2>
           <ul
-            class="d-flex flex-wrap me-0 ms-0 mb-32 list-unstyled align-items-center justify-content-center justify-content-md-start gap-16 text-nowrap"
+            class="d-flex flex-wrap me-0 ms-0 mb-32 list-unstyled align-items-center justify-content-center justify-content-md-start gap-8 gap-md-16 text-nowrap"
           >
             <li
-              class="col-5 col-lg-auto btn btn-outline-light border-primary py-16"
+              class="col-5 col-lg-auto border rounded-2 text-center border-primary py-16"
             >
-              <a href="#">信用卡付款</a>
+              <a class="px-md-32" href="#">信用卡付款</a>
             </li>
-            <li class="col-5 col-lg-auto btn btn-outline-light py-16">
-              <a class="text-white" href="#">超商繳款</a>
+            <li class="col-5 col-lg-auto border rounded-2 text-center py-16">
+              <a class="text-white px-md-32" href="#">超商繳款</a>
             </li>
-            <li class="col-5 col-lg-auto btn btn-outline-light py-16">
-              <a class="text-white" href="#">ATM轉帳</a>
+            <li class="col-5 col-lg-auto border rounded-2 text-center py-16">
+              <a class="text-white px-md-32" href="#">ATM轉帳</a>
             </li>
-            <li class="col-5 col-lg-auto btn btn-outline-light py-16">
-              <a class="text-white" href="#">12期分期付款</a>
+            <li class="col-5 col-lg-auto border rounded-2 text-center py-16">
+              <a class="text-white px-md-32" href="#">12期分期付款</a>
             </li>
           </ul>
           <h2 class="fs-4 mb-24">訂單資訊</h2>
@@ -98,7 +98,6 @@ current: index
                 />
               </div>
             </div>
-            <div></div>
           </div>
           <div class="row mb-24">
             <div class="col d-flex flex-column">
@@ -113,29 +112,57 @@ current: index
           </div>
           <div class="row mb-24">
             <div class="col-md-6">
-                <div class="d-flex flex-column">
-                  <label class="text-info" for="course">課程</label>
-                  <select
-                    id="course"
-                    class="form-select py-8 px-16 rounded-1"
-                    aria-label="Default select example"
-                  >
-                    <option selected>10堂50分鐘</option>
-                    <option value="1">10堂50分鐘</option>
-                    <option value="2">10堂50分鐘</option>
-                    <option value="3">10堂50分鐘</option>
-                  </select>
-                </div>
-  
+              <div class="d-flex flex-column">
+                <label class="text-info mb-6" for="course">課程</label>
+                <select
+                  id="course"
+                  class="form-select py-8 px-16 rounded-2"
+                  aria-label="Default select example"
+                >
+                  <option selected>10堂50分鐘</option>
+                  <option value="1">10堂50分鐘</option>
+                  <option value="2">10堂50分鐘</option>
+                  <option value="3">10堂50分鐘</option>
+                </select>
               </div>
-              <div class="col-md-6">
-                    <div class="d-flex flex-column">
-                        <label for="date">想預約的日期</label>
-                        <input type="btn date text" name="foo">
-                    </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex flex-column">
+                <label for="datepicker" class="text-info mb-6"
+                  >想預約的日期</label
+                >
+                <input
+                  id="datepicker"
+                  type="text"
+                  placeholder="請選擇日期"
+                  name="datepicker"
+                  class="form-control rounded-2 py-8 px-16 bg-main-bg"
+                />
               </div>
+            </div>
           </div>
-
+          <div class="row">
+            <div class="d-flex flex-column mb-24">
+              <p class="text-info mb-6">上課地點</p>
+              <input
+                class="py-8 px-16 bg-main-bg border border rounded-2 text-white"
+                type="text"
+                placeholder="請輸入上課地點"
+              />
+            </div>
+            <div class="row pe-0">
+              <div
+                class="d-flex align-items-center pe-0 flex-column flex-md-row"
+              >
+                <p class="mb-24 mb-md-0 me-auto fs-4">NT$1600</p>
+                <a
+                  type="submit"
+                  class="btn btn-gradient col-12 col-md-auto"
+                  href="./checkout-2.html"
+                  >前往結賬</a
+                >
+              </div>
+            </div>
           </div>
         </form>
       </div>

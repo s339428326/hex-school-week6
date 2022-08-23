@@ -1,0 +1,32 @@
+.triangle {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: " ";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 12px 0 12px;
+    border-color: $black-1 transparent transparent transparent;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @include media-breakpoint-up(md) {
+    &::before {
+      display: none;
+    }
+    &::after {
+      position: absolute;
+      content: " ";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 12px 0 12px 12px;
+      border-color: transparent transparent transparent $black-1;
+      right: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

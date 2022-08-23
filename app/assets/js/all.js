@@ -34,18 +34,20 @@ var courseSwiper = new Swiper(".course-swiper", {
   freeMode: true,
 });
 
-const list = document.querySelector(".list");
 const handle = document.querySelector(".handle");
-
 handle.addEventListener("click", (e) => {
+  const list = document.querySelector(".list");
   list.classList.toggle("list--active");
 });
 
-import Datepicker from "../../../node_modules/vanillajs-datepicker/js/Datepicker.js";
-const elem = document.querySelector(".date");
-// const datepicker = new Datepicker(elem, {
-//   language: "zh-TW",
-// });
+const elem = document.querySelector('input[name="datepicker"]');
 const datepicker = new Datepicker(elem, {
-  buttonClass: "btn",
+  language: "zh-TW",
+});
+
+const myModal = document.getElementById("myModal");
+const myInput = document.getElementById("myInput");
+
+myModal.addEventListener("shown.bs.modal", () => {
+  myInput.focus();
 });

@@ -1,0 +1,7 @@
+.spical-footer {
+  @include media-breakpoint-up(md) {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+}

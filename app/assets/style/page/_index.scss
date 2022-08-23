@@ -15,6 +15,21 @@ header {
   }
 }
 
+.list-square {
+  list-style-type: square;
+  &::marker {
+    color: $primary;
+  }
+}
+
+.number {
+  position: absolute;
+  font-size: 3rem !important;
+  top: -2.5rem;
+  padding: 0 8px;
+  background-color: $black-2;
+}
+
 .banner-h {
   min-height: 336px;
   background: url(../images/bg_home_mobile.jpg) no-repeat;

@@ -2,25 +2,17 @@
 @import "./helpers/variables";
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
-@import "./base/mixin";
+@import "./abstracts/mixin";
+
+@import "./components/button";
 
 @import "./layout/header";
+@import "./layout/footer";
+
 @import "./page/index.scss";
 @import "./page/course";
-
-//gradient
-.gradient {
-  @include gradient-text();
-}
-
-//index
-.number {
-  position: absolute;
-  font-size: 3rem !important;
-  top: -2.5rem;
-  padding: 0 8px;
-  background-color: $black-2;
-}
+@import "./page/checkout-1";
+@import "./page/Introduction";
 
 //共用
 .text-btLine {
@@ -35,32 +27,11 @@
   object-fit: cover;
 }
 
-.btn-gradient {
-  color: white;
-  background: linear-gradient(to right, $green, $blue);
-}
-
 .btn-activce {
   border-color: $primary !important;
   background-color: transparent !important;
   a {
     color: $primary !important;
-  }
-}
-
-.list-square {
-  list-style-type: square;
-  &::marker {
-    color: $primary;
-  }
-}
-
-.float-block {
-  position: relative;
-  @include media-breakpoint-up(md) {
-    position: sticky;
-    top: 92px;
-    z-index: 0;
   }
 }
 
@@ -120,6 +91,126 @@
   }
 }
 
+.timeline-2 {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: " ";
+    left: 0;
+    right: 50%;
+    background-color: $primary;
+    height: 2px;
+  }
+  &::before {
+    position: absolute;
+    content: " ";
+    left: 50%;
+    right: 0;
+    background-color: $gray-400;
+    height: 2px;
+  }
+  &-pointer {
+    position: relative;
+    p {
+      padding-top: 24px;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: -9px;
+      border: 1px solid $gray-400;
+      background-color: $black-1;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+    }
+    &.step-1::before {
+      content: "\2713";
+    }
+    &.step-2::before {
+      content: "2";
+      background-color: $primary;
+      border: $primary;
+      color: white;
+    }
+    &.step-3::before {
+      content: "3";
+    }
+    &.active {
+      &::before {
+        color: white;
+        background-color: $primary;
+        border: $primary;
+      }
+    }
+  }
+}
+.timeline-3 {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: " ";
+    left: 0;
+    right: 50%;
+    background-color: $primary;
+    height: 2px;
+  }
+  &::before {
+    position: absolute;
+    content: " ";
+    left: 50%;
+    right: 0;
+    background-color: $primary;
+    height: 2px;
+  }
+  &-pointer {
+    position: relative;
+    p {
+      padding-top: 24px;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: -9px;
+      border: 1px solid $gray-400;
+      background-color: $black-1;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+    }
+    &.step-1::before {
+      content: "\2713";
+    }
+    &.step-2::before {
+      content: "\2713";
+      background-color: $primary;
+      border: $primary;
+      color: white;
+    }
+    &.step-3::before {
+      content: "\2713";
+      background-color: $primary;
+      border: $primary;
+      color: white;
+    }
+    &.active {
+      &::before {
+        color: white;
+        background-color: $primary;
+        border: $primary;
+      }
+    }
+  }
+}
+
 .cards-zindex {
   @include media-breakpoint-up(md) {
     position: absolute;
@@ -150,25 +241,6 @@
   }
 }
 
-//datepicker
-.datepicker-controls {
-  .button {
-    justify-content: center;
-    padding-bottom: calc(0.5em - 1px);
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: calc(0.5em - 1px);
-    text-align: center;
-    white-space: nowrap;
-    color: $dark;
-    background-color: $white;
-    border: 1px solid transparent;
-    cursor: pointer;
-    &:hover {
-      background-color: $gray-100;
-    }
-  }
-  .view-switch {
-    flex: auto;
-  }
+.fs-43 {
+  font-size: 43px;
 }

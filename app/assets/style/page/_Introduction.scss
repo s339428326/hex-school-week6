@@ -1,0 +1,8 @@
+.float-block {
+  position: relative;
+  @include media-breakpoint-up(md) {
+    position: sticky;
+    top: 92px;
+    z-index: 0;
+  }
+}

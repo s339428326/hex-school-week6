@@ -40,3 +40,37 @@
   padding: 24px;
   max-height: 500px;
 }
+
+.modal-dialog {
+  max-width: 636px;
+}
+
+.login-line {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  &::after {
+    content: " ";
+    height: 1px;
+    width: 30%;
+    background-color: $gray-400;
+  }
+  &::before {
+    content: " ";
+    height: 1px;
+    width: 30%;
+    background-color: $gray-400;
+  }
+}
+
+.icon-img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+
+.btn-close {
+  position: absolute;
+  top: 32px;
+  right: 24px;
+}
